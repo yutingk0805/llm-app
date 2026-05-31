@@ -99,4 +99,3 @@ generates and grades the attacks, so no OpenAI key is needed.
 ```bash
 cd infra && terraform destroy
 ```
-Then disable the IAM user's access keys in the console.
