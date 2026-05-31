@@ -15,7 +15,7 @@ The only difference between a "secure" and "insecure" reply is the configuration
 - **Models:** Claude Haiku 4.5 / Amazon Nova Lite, called through a Bedrock cross-region inference profile
 - **Infra:** Terraform in [`infra/`](infra/) — guardrail, IAM policy, CloudWatch invocation logging
 - **UI:** Next.js (App Router), runs locally
-- **Red-teaming (Promptfoo):** in a **separate repo**, pointed at `http://localhost:3000/api/chat`
+- **Red-teaming (Promptfoo):** in a [**separate repo**](https://github.com/yutingk0805/llm-app-redteam), pointed at `http://localhost:3000/api/chat`
 
 ---
 
@@ -84,9 +84,9 @@ Attacks and guardrail interventions are logged to the CloudWatch log group `/bed
 
 ---
 
-## Red-teaming (separate repo)
+## Red-teaming
 
-Promptfoo runs from its own repo. Point its HTTP target at this app while it's running:
+Promptfoo runs from [its own repo](https://github.com/yutingk0805/llm-app-redteam). Point its HTTP target at this app while it's running:
 `http://localhost:3000/api/chat`, with a JSON body of
 `{"messages":[{"role":"user","content":"{{prompt}}"}],"guardrails":false}`. Flip the
 `guardrails` / `insecurePrompt` / `model` flags to compare configurations. Bedrock Claude
