@@ -1,0 +1,6 @@
+# Copy to terraform.tfvars and set your existing demo IAM user.
+iam_user_name = "acme-demo-user"
+
+# Optional overrides:
+# aws_region                = "ap-southeast-2"
+# enable_invocation_logging = true   # set false if the account already has a Bedrock logging config

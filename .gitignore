@@ -32,6 +32,14 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local.example
+
+# terraform
+infra/.terraform/
+*.tfstate
+*.tfstate.*
+infra/terraform.tfvars
+crash.log
 
 # vercel
 .vercel
